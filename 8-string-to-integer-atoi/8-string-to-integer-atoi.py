@@ -16,17 +16,11 @@ class Solution(object):
             if s[i] == '+':
                 ans += '+'
                 continue
-            #if ans == '+-' or ans == '-+':
-                #ans = ''
-                #break
             j = i
             while j < len(s) and s[j] >= '0' and s[j] <= '9':
                 ans += s[j]
                 j += 1
             break
-        #if ans in ['', '-', '+', '-+', '+-']:
-            #ans = 0
-            
         try: 
             ans = int(ans)
         except ValueError:
